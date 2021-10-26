@@ -6,6 +6,7 @@ import data from '../../Services/data.json';
 function Table() {
 	const ref = useRef(null);
 	const [state, setState] = useState([]);
+	const [search, setSearch] = useState('');
 
 	const { onMouseDown } = useDraggableScroll(ref);
 
@@ -28,12 +29,34 @@ function Table() {
 		return result;
 	};
 
+	const handleKey = (e) => {
+		if (e.key === 'Enter') {
+			searchName(search);
+		}
+	};
+
+	const searchName = (str) => {
+		setState(
+			data.filter((item) =>
+				item.Fullname.toLowerCase().includes(str.toLowerCase())
+			)
+		);
+	};
+
 	useEffect(() => {
 		setState(data);
 	}, []);
 
 	return (
 		<>
+			<input
+				placeholder='Введите имя для поиска'
+				type='text'
+				value={search}
+				onKeyDown={handleKey}
+				onChange={(e) => setSearch(e.target.value)}
+				className={styles.input}
+			/>
 			<div className={styles.table}>
 				<span className={styles.user}>
 					<span>User</span>
