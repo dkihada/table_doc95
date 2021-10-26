@@ -1,0 +1,92 @@
+.table {
+	display: grid;
+	grid-template-columns: 200px 1fr 150px;
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+.user {
+	display: grid;
+	grid-template-columns: 200px;
+}
+
+.user span{
+	background: rgb(250, 154, 85);
+	padding: 3px;
+	border: 1px solid black
+}
+
+.user span:first-child{
+	border-radius: 8px 0 0 0;
+	border: 1px solid black
+}
+
+.user span:last-child{
+	border-radius: 0 0 0 8px;
+	border: 1px solid black
+}
+
+.total span:first-child{
+	border-radius: 0 8px 0 0;
+	border: 1px solid black
+}
+
+.total span:last-child{
+	border-radius: 0 0 8px 0;
+	border: 1px solid black
+}
+
+.days {
+	display: grid;
+	grid-template-columns: 1fr;
+
+	width: 730px;
+	overflow: hidden;
+}
+
+.day {
+	display: flex;
+	justify-content: space-between;
+	background: rgb(250, 154, 85);
+}
+
+.date {
+	width: 65px;
+	padding: 3px;
+	border: 1px solid black
+}
+
+.block {
+	display: grid;
+	grid-template-columns: 1fr;
+}
+.hours {
+	display: flex;
+	justify-content: space-between;
+}
+
+.hour {
+	padding: 3px;
+	width: 65px;
+	border: 1px solid black;
+}
+
+.total {
+	display: grid;
+	
+}
+
+.total span{
+	background: rgb(250, 154, 85);
+	border: 1px solid black;
+	padding: 3px;
+}
+
+.input {
+	margin:  0 0 20px 0;
+	padding: 10px 15px;
+	border-radius: 5px;
+
+	font-size: 18px;
+	
+}
