@@ -1,7 +1,9 @@
 .table {
 	display: grid;
 	grid-template-columns: 200px 1fr 150px;
+
 	margin-bottom: 40px;
+
 	text-align: center;
 }
 
@@ -10,83 +12,88 @@
 	grid-template-columns: 200px;
 }
 
-.user span{
-	background: var(--primary);
+.user span {
 	padding: 3px;
-	border: 1px solid rgba(0, 0, 0, 0.363);
+
+	border: 1px solid rgb(0 0 0 / 36.3%);
+	background: var(--primary);
 }
 
-.user span:first-child{
-	border-radius: 8px 0 0 0;
-	border: 1px solid rgba(0, 0, 0, 0.363);
+.user span:first-child {
+	border: 1px solid rgb(0 0 0 / 36.3%);
+	border-radius: 8px 0 0;
 }
 
-.user span:last-child{
+.user span:last-child {
+	border: 1px solid rgb(0 0 0 / 36.3%);
 	border-radius: 0 0 0 8px;
-	border: 1px solid rgba(0, 0, 0, 0.363);
 }
 
-.total span:first-child{
+.total span:first-child {
+	border: 1px solid rgb(0 0 0 / 36.3%);
 	border-radius: 0 8px 0 0;
-	border: 1px solid rgba(0, 0, 0, 0.363);
 }
 
-.total span:last-child{
-	border-radius: 0 0 8px 0;
-	border: 1px solid rgba(0, 0, 0, 0.363)
+.total span:last-child {
+	border: 1px solid rgb(0 0 0 / 36.3%);
+	border-radius: 0 0 8px;
 }
 
 .days {
 	display: grid;
-	grid-template-columns: 1fr;
-	width: 730px;
 	overflow: hidden;
-	
+
+	width: 730px;
+	grid-template-columns: 1fr;
 }
 
 .day {
 	display: flex;
 	justify-content: space-between;
+
 	background: var(--primary);
 }
 
 .date {
 	width: 65px;
 	padding: 3px;
-	border: 1px solid rgba(0, 0, 0, 0.363);
+
+	border: 1px solid rgb(0 0 0 / 36.3%);
 }
 
 .block {
 	display: grid;
 	grid-template-columns: 1fr;
 }
+
 .hours {
 	display: flex;
 	justify-content: space-between;
 }
 
 .hour {
-	padding: 3px;
 	width: 65px;
-	border: 1px solid rgba(0, 0, 0, 0.363);
+	padding: 3px;
+
+	border: 1px solid rgb(0 0 0 / 36.3%);
 }
 
 .total {
 	display: grid;
-	
 }
 
-.total span{
-	background: var(--primary);
-	border: 1px solid rgba(0, 0, 0, 0.363);
+.total span {
 	padding: 3px;
+
+	border: 1px solid rgb(0 0 0 / 36.3%);
+	background: var(--primary);
 }
 
 .input {
-	margin:  0 0 20px 0;
+	margin: 0 0 20px;
 	padding: 10px 15px;
+
 	border-radius: 5px;
 
 	font-size: 18px;
-	
 }
