@@ -11,49 +11,49 @@
 }
 
 .user span{
-	background: rgb(250, 154, 85);
+	background: var(--primary);
 	padding: 3px;
-	border: 1px solid black
+	border: 1px solid rgba(0, 0, 0, 0.363);
 }
 
 .user span:first-child{
 	border-radius: 8px 0 0 0;
-	border: 1px solid black
+	border: 1px solid rgba(0, 0, 0, 0.363);
 }
 
 .user span:last-child{
 	border-radius: 0 0 0 8px;
-	border: 1px solid black
+	border: 1px solid rgba(0, 0, 0, 0.363);
 }
 
 .total span:first-child{
 	border-radius: 0 8px 0 0;
-	border: 1px solid black
+	border: 1px solid rgba(0, 0, 0, 0.363);
 }
 
 .total span:last-child{
 	border-radius: 0 0 8px 0;
-	border: 1px solid black
+	border: 1px solid rgba(0, 0, 0, 0.363)
 }
 
 .days {
 	display: grid;
 	grid-template-columns: 1fr;
-
 	width: 730px;
 	overflow: hidden;
+	
 }
 
 .day {
 	display: flex;
 	justify-content: space-between;
-	background: rgb(250, 154, 85);
+	background: var(--primary);
 }
 
 .date {
 	width: 65px;
 	padding: 3px;
-	border: 1px solid black
+	border: 1px solid rgba(0, 0, 0, 0.363);
 }
 
 .block {
@@ -68,7 +68,7 @@
 .hour {
 	padding: 3px;
 	width: 65px;
-	border: 1px solid black;
+	border: 1px solid rgba(0, 0, 0, 0.363);
 }
 
 .total {
@@ -77,8 +77,8 @@
 }
 
 .total span{
-	background: rgb(250, 154, 85);
-	border: 1px solid black;
+	background: var(--primary);
+	border: 1px solid rgba(0, 0, 0, 0.363);
 	padding: 3px;
 }
 
