@@ -1,14 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
-import useDraggableScroll from 'use-draggable-scroll';
 import styles from './Table.module.css';
 import data from '../../Services/data.json';
+import ScrollContainer from 'react-indiana-drag-scroll';
 
 function Table() {
 	const ref = useRef(null);
 	const [state, setState] = useState([]);
 	const [search, setSearch] = useState('');
-
-	const { onMouseDown } = useDraggableScroll(ref);
 
 	const allDays = [];
 
@@ -66,7 +64,16 @@ function Table() {
 				</span>
 
 				<span>
-					<span ref={ref} onMouseDown={onMouseDown} className={styles.days}>
+					<ScrollContainer
+						innerRef={ref}
+						className={styles.days}
+						activationDistance={50}
+						onClick={(e) => {
+							if (e.target.classList.value.includes('hour')) {
+								window.getSelection().selectAllChildren(e.target);
+							}
+						}}
+					>
 						<span className={styles.day}>
 							{allDays.map((dat) => (
 								<span className={styles.date} key={dat}>
@@ -92,12 +99,12 @@ function Table() {
 								</span>
 							</span>
 						))}
-					</span>
+					</ScrollContainer>
 				</span>
 				<span className={styles.total}>
-					<span>Mountly</span>
+					<span>Monthly total</span>
 					{state.map((t) => (
-						<span key={t.id}>Сумма</span>
+						<span key={t.id}>Всего часов</span>
 					))}
 				</span>
 			</div>
